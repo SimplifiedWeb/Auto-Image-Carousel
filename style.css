@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    /* text-decoration: line-through; */
+    margin-top: 20px;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(white,pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgcontainer{
+    width: 350px;
+    height: 320px;
+    /* object-fit: cover; */
+    overflow: hidden;
+}
+img{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+}
+#move,#move1{
+    display: flex;
+    transition: transform 0.3 ease-in-out;
+    transform: translateX(0px) ;
+}
+.first{
+    position: absolute;
+    bottom: 0;
+    font-size: 30px;
+}
+/* #move1{
+    display: flex;
+    transition: transform 0.3 ease-in-out;
+    transform: translateX(0px) ;
+} */
+
+.middleimage{
+    overflow: hidden;
+    width: 500px;
+    height: 470px;
+    border-radius: 40%;
+}
+.middleimage img{
+    width: 500px;
+    height: 470px;
+    object-fit: cover;
+    
+}
+#move2{
+    /* display: flex;    //Bcz image is flowing in the vertical side  */
+    transition: transform 0.3 ease-in-out;
+    /* transform: translateY(0px);  //It is not Neccessary to write this we already give it on Javascript */
+}
+
+@media screen  and (max-width: 600px){
+    .container{
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .imgcontainer{
+        overflow: hidden;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    h1{
+        display: block;
+        font-size: 20px;
+    }
+    .middleimage{
+        display: flex;
+        width: 80%;
+        margin-bottom: 22%;
+        margin-left: 12%;
+    }
+
+}
