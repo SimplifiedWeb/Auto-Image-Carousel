@@ -1,32 +1,29 @@
-# Auto-Image-Carousel
-# The Main goal is to Understand The Logic How it is working.
-# Open project code one side and this readme another side to better understand what I'm trying to say.
-Check out Demo: https://simplifiedweb.github.io/Auto-Image-Carousel/
-I develop a Auto ImageCarousel. Let me Explain you in Simple way.
+# Auto Image Carousel
+# The main goal is to understand the logic behind its functioning.
+# Open the project code on one side and this readme on the other side to better understand what I'm trying to convey.
+Check out the demo: https://simplifiedweb.github.io/Auto-Image-Carousel/
 
-so let's first think about it, we have three boxes, left middle and right; 
-so they all are different sizes but the functionality was all the same in all the boxes.
+I've developed an auto image carousel. Let me explain it in a simple way.
 
-Three boxes means three container each containing has images. so the idea is like every box has different sizes.
-so we have to think about that, how we are gonna do that, how we are gonna target each one of them.
-So we use id for each container to uniquely identifies each of them and make the sizes of each container.
+First, let's consider that we have three boxes: left, middle, and right. Even though they have different sizes, their functionality is the same across all boxes.
 
- After we do all the structure part then we move on to css part where we talk about the Transform property. Bcz keep in mind
- 
-each image we have to move in some pixels to get the second image or than third. So transform-Translate property was important
+Having three boxes implies having three containers, and each container has images. The idea here is that every box has a different size, so we need to address how we can uniquely identify and size each container. This is where we use IDs for each container to give them distinctive attributes, including their sizes.
 
-So on the starting point the transform translate was to be Zero bcz for the first image we don't want that.
+Once we have established the structure, we move on to the CSS part, where we discuss the use of the transform property. It's essential to note that we need to move each image by a certain number of pixels to display the second and third images. This is where the transform property, specifically translate, comes into play.
 
-So logic is simple if you give the width of images like 300px so the transform translate property should be 300px also. for example
+At the starting point, the transform translate value is set to zero because we don't want any translation for the first image.
 
-index = 0 we have 300px of translate.
+The logic is straightforward: If you set the width of the images to, let's say, 300px, then the transform translate property should also be 300px.
 
-index = 1 we have 300px * 2 of translate
+For example:
 
-index = 3 we have 300px * 3 of translate.
+When index = 0, we have a translate of 300px.
+When index = 1, we have a translate of 300px * 2 (600px).
+When index = 2, we have a translate of 300px * 3 (900px).
+Since each image has a width of 300px, the translation moves the image by the width value each time. This results in the images aligning properly.
 
-bcz each image width was 300px so it move everytime from 300px for first and second for 600px for third 900px like that.
+The same logic applies to the other images as well. We just need to move each image by its width and adjust it using the translate transform property.
 
-So basic scenario is same for others. The logic same we want just move the image by width and adjust it by translate transform property.
+We use the setInterval function for continuous iteration.
 
-setInterval for continuous iteration.
+Feel free to explore the demo link to see the carousel in action!
